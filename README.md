@@ -1,6 +1,15 @@
 # BiometricAuth
 A mobile-based Biometric Authentication (Enrolling and Verification) system.
 
+## Tech Stack
+
+- Android Studio
+- Gradle
+- Kotlin
+- Firebase (Authentication and DB)
+- CloudRail (Notifications)
+- Material UI
+
 ### License
 
 ```
