@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EnrollCandidate">
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/nameField"
+              android:hint="@string/nameField"
+              android:layout_centerHorizontal="true"
+              android:inputType="textCapWords"
+    />
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/emailField"
+              android:layout_below="@id/nameField"
+              android:hint="@string/emailField"
+              android:layout_centerHorizontal="true"
+              android:inputType="textEmailAddress"
+    />
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/phoneField"
+              android:layout_below="@id/emailField"
+              android:hint="@string/phoneField"
+              android:layout_centerHorizontal="true"
+              android:inputType="phone"
+    />
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/dobButton"
+              android:layout_below="@id/phoneField"
+              android:layout_centerInParent="true"
+              android:hint="@string/selectDob"
+              android:onClick="getDob"
+              android:clickable="true"
+              android:focusable="false"
+              android:inputType="date"
+
+    />
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/openCameraButton"
+            android:layout_below="@id/dobButton"
+            android:layout_centerInParent="true"
+            android:text="@string/openCamera"
+    />
+
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+               android:id="@+id/result"
+               android:layout_below="@id/openCameraButton"
+               android:contentDescription="@string/enroll"
+               android:scaleType="centerInside"
+               android:adjustViewBounds="true"
+               android:visibility="gone"
+    />
+
+</RelativeLayout>

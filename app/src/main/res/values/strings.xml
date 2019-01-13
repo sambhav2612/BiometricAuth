@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">Biometric Auth</string>
+    <string name="enroll">Enroll New Candidate</string>
+    <string name="verify">Verify Candidates</string>
+    <string name="share">Share</string>
+    <string name="shareToast">Sharing application…</string>
+    <string name="shareAppText">Please download this app from play store [here\'s your link]</string>
+    <string name="nameField">Enter name</string>
+    <string name="emailField">Enter email</string>
+    <string name="phoneField">Enter phone</string>
+    <string name="selectDob">Enter DOB</string>
+    <string name="openCamera">Open Camera</string>
+    <string name="cameraErrorMsg">Sorry! Your device doesn\'t support camera</string>
+</resources>
