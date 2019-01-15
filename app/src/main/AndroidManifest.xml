@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="io.sambhav2612.biometricauth">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="io.sambhav2612.biometricauth">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -8,8 +9,16 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-    <uses-feature android:name="android.hardware.camera2" android:required="true"/>
-    <uses-feature android:name="android.hardware.location.gps" android:required="true"/>
+    <uses-feature
+            android:name="android.hardware.camera2"
+            android:required="true"/>
+    <uses-feature
+            android:name="android.hardware.location.gps"
+            android:required="true"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
 
     <application
             android:allowBackup="true"
@@ -18,29 +27,54 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity"
+                  android:parentActivityName=".LoginActivity">
             <tools:validation testUrl="https://sambhav2612.io/BiometricAuth"/>
+            <!--
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN"/>
+
+                            <category android:name="android.intent.category.LAUNCHER"/>
+                        </intent-filter>
+                        -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="sambhav2612.io"
+                        android:pathPattern="/BiometricAuth"
+                        android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <data android:mimeType="text/plain"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".EnrollCandidate"
+                android:label="@string/enroll"
+                android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+                android:name=".VerifyCandidate"
+                android:label="@string/verify"
+                android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+                android:name=".LoginActivity"
+                android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data
-                        android:scheme="https"
-                        android:host="sambhav2612.io"
-                        android:pathPattern="/BiometricAuth"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".EnrollCandidate" android:parentActivityName=".MainActivity"
-                  android:label="@string/enroll">
-        </activity>
-        <activity android:name=".VerifyCandidate" android:parentActivityName=".MainActivity"
-                  android:label="@string/verify">
         </activity>
     </application>
 

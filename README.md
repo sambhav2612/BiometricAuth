@@ -10,6 +10,14 @@ A mobile-based Biometric Authentication (Enrolling and Verification) system.
 - CloudRail (Notifications)
 - Material UI
 
+### Updates
+
+* Add Firebase Authentication
+* Redid AppBar
+* Add Navigation Drawer
+* Updated Camera Mechanism
+* Updated Runtime Permission Mechanism
+
 ### License
 
 ```

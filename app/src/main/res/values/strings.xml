@@ -5,10 +5,24 @@
     <string name="share">Share</string>
     <string name="shareToast">Sharing application…</string>
     <string name="shareAppText">Please download this app from play store [here\'s your link]</string>
-    <string name="nameField">Enter name</string>
-    <string name="emailField">Enter email</string>
-    <string name="phoneField">Enter phone</string>
-    <string name="selectDob">Enter DOB</string>
+    <string name="nameField">Name</string>
+    <string name="emailField">Email</string>
+    <string name="phoneField">Phone Number</string>
+    <string name="selectDob">Date of Birth (DOB)</string>
     <string name="openCamera">Open Camera</string>
     <string name="cameraErrorMsg">Sorry! Your device doesn\'t support camera</string>
+    <string name="signout">Signout</string>
+    <string name="homr">Home</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
 </resources>
