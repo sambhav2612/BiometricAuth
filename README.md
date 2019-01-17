@@ -1,4 +1,6 @@
 # BiometricAuth
+[![Build status](https://build.appcenter.ms/v0.1/apps/c0fa0921-638c-4da1-9dcf-cc2c0f96cd89/branches/master/badge)](https://appcenter.ms)
+
 A mobile-based Biometric Authentication (Enrolling and Verification) system.
 
 ## Tech Stack
